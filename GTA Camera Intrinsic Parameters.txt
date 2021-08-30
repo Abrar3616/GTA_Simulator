@@ -1,0 +1,29 @@
+These are the camera intrinsic parameters for GTA V used for ORB-SLAM. The orignal images are at 1920*1080 resolution, however if you resize the images the camera matrix values i.e. fx, fy, cx, cy must be scaled accordingly.
+
+%-- Focal length:
+fc = [ 1215.926670639178155 ; 1131.013669451708665 ];
+
+%-- Principal point:
+cc = [ 950.712480185997606 ; 528.899518469791929 ];
+
+%-- Skew coefficient:
+alpha_c = 0.000000000000000;
+
+%-- Distortion coefficients:
+kc = [ -0.008125309187709 ; 0.026284117446103 ; -0.004616290337802 ; 0.004903492849389 ; 0.000000000000000 ];
+
+%-- Focal length uncertainty:
+fc_error = [ 19.977170849754270 ; 18.476277517778826 ];
+
+%-- Principal point uncertainty:
+cc_error = [ 18.100874066418626 ; 15.991666119044135 ];
+
+%-- Skew coefficient uncertainty:
+alpha_c_error = 0.000000000000000;
+
+%-- Distortion coefficients uncertainty:
+kc_error = [ 0.038721524034182 ; 0.097680320025344 ; 0.004684565098265 ; 0.005262731734638 ; 0.000000000000000 ];
+
+%-- Image size:
+nx = 1920;
+ny = 1080;
