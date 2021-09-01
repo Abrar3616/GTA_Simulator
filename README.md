@@ -27,16 +27,35 @@ We'll show you how to create a network shared folder for use with this simulator
 **Ubuntu 16.04 PC**
 
   - First create a folder named 'gta_live' in the home directory
+
+![Screenshot from 2021-09-01 16-37-13](https://user-images.githubusercontent.com/74458556/131667953-e3c97810-3041-4ffe-8560-6f4281d10a8c.png)
+
   - Inside it create another folder named 'images'. This is where we will save the extracted images. 
   - Then create an empty text file named pose.txt inside 'gta_live folder but outside 'images' folder. Make sure to alter its permissions so that others can also read and write. This way the Windows 10 PC can also write to this file. This is where we will save the poses of the extracted images.
+
+![Screenshot from 2021-09-01 16-49-34](https://user-images.githubusercontent.com/74458556/131667968-d85da6e1-a2a1-4c90-ae3a-7537be021bd6.png)
+
   - Then right click on 'gta_live' folder
   - Open 'properties'
+
+![Screenshot from 2021-09-01 17-09-17](https://user-images.githubusercontent.com/74458556/131668877-73832b7c-2e67-44de-a3f6-c601bad4c3e8.png)
+
   - Click on 'Local Network Share' tab
+
+![Screenshot from 2021-09-01 16-49-02](https://user-images.githubusercontent.com/74458556/131667961-96dc19bf-0202-4442-9368-47fd507b2c84.png)
+
   - Tick the 'Share this folder' box
   - Also tick both the 'Allow others to create and delete files in this folder' and 'Guest access (for people without a user account)' boxes
+
+![Screenshot from 2021-09-01 16-49-12](https://user-images.githubusercontent.com/74458556/131667963-f826958f-af8c-4ec9-99b0-88357a95e842.png)
+
   - Then finally click on 'Create Share' button
 
+![Screenshot from 2021-09-01 16-49-27](https://user-images.githubusercontent.com/74458556/131667966-397230d9-8ed2-45ec-9466-c1b662294e5b.png)
+
 Now the folder is shared, we just need to access it from the Windows 10 PC.
+
+![Screenshot from 2021-09-01 16-50-04](https://user-images.githubusercontent.com/74458556/131667970-2c5b0051-66b8-4cc4-8c9d-4cf3b17b179f.png)
 
 **Windows 10 PC**
 
