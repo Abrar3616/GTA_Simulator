@@ -2,7 +2,7 @@
 A realtime simulator with motion blur for computor vision community using Grand Theft Auto V (GTA-V)
 
 ## About
-GTA_Simulator is a realtime simulator that uses GTA-V as the source and has the option to add three levels of motion blur to the source. It extracts images and 6D poses against those images from the GTA-V game using the ScriptHookV library. It is based on G2D: from GTA to Data by Anh-Dzung Doan et. al. However in contrast to that work we propose a realtime data extraction algorithm. After extraction these images and poses are then saved in a network shared folder for another PC to access and use for mapping etc. This System uses two PC's with GPUs, one a windows 10 PC that runs the GTA-V game and the data extraction algorithm and one a Ubuntu 16.04 PC that uses that data as a feed to a mapping algorithm like ORB-SLAM etc. with or without added motion blur.  
+GTA_Simulator is a realtime simulator that uses GTA-V as the source and has the option to add three levels of motion blur to the source. It extracts images and 6D poses against those images from the GTA-V game using the ScriptHookV library. It is based on G2D: from GTA to Data by Anh-Dzung Doan et. al. However in contrast to that work we propose a realtime data extraction algorithm. After extraction these images and poses are then saved in a network shared folder for another PC to access and use for mapping etc. This System uses two PC's with GPUs, one a windows 10 PC that runs the GTA-V game and the data extraction algorithm and one a Ubuntu 16.04 PC that uses that data as a feed to a mapping algorithm like ORB-SLAM etc. with or without added motion blur.
 
 ## Pre-requisites
 The following are the pre-requisites that need to fulfilled:
@@ -29,7 +29,9 @@ Once all the pre-requisites have been fulfilled we can begin to setup the simula
   - Goto the Trajectory Tool folder of G2D and replace script.cpp and script.h file with ours from GTA-Scripts folder.
   - Open our script.cpp file in visual studio and replace the ip address in line 29 and 30 with that of your Ubuntu 16.04 PC that has the network shared folder.
   - Build the solution then take the G2D-Trajectory.asi file from bin folder and add it to the GTA-V directory.
-    
+
+You can also adjust the script.cpp file to get camera pose in quaternions. Simply uncomment lines 134 and 142 and subsequently comment line 143.
+
 **Ubuntu 16.04 PC**
 
   - Create standard individual packages for Blur-GTA, Blur-Merger and Merger scripts with those names in catkin_ws. 
@@ -51,7 +53,17 @@ Once all necessary scripts and packages have been installed we can get started o
   - You can use the bash script provided to automatically execute the acripts after setting it based on how much motion blur is needed, if at all.
   - This script will run ORB-SLAM and the blur node if required. The mapping will start.
 
-Be sure to wait a few seconds for ORB-SLAM to setup before starting the extraction of images and poses.
+Be sure to wait a few seconds for ORB-SLAM to setup before starting the extraction of images and 6D poses.
+
+The pose file contains the 6D poses in the following format:
+
+With Quaternions:
+              
+    # pathtoimage tx ty tz qx qy qz qw
+    
+With Roll, Pitch and Yaw:
+
+    # pathtoimage tx ty tz p r y
 
 ## License
 This work and any data acquired from this work is for educational and research purposes only. Any commercial use is strictly prohibited.
