@@ -22,17 +22,13 @@ int main(int argc, char* argv[])
     while(nh.ok())
     {
       stringstream ss;
-      //stringstream si;
       ss << "/home/abrar/gta_live/images/" << std::to_string(i) << ".jpg";
       std::string image_name;
       image_name =  ss.str();
-    	image = cv::imread(image_name,CV_LOAD_IMAGE_COLOR);
+      image = cv::imread(image_name,CV_LOAD_IMAGE_COLOR);
       if(!image.empty())
       {
         resize(image, imager, cv::Size(640, 480), 0, 0, CV_INTER_AREA);
-        //si << std::setfill('0') << std::setw(4) << i;
-        //std::string s = si.str();
-        //cv::imwrite("/home/abrar/trajectory-6/"+ s +".jpg", imager);
         msg = cv_bridge::CvImage(std_msgs::Header(),"bgr8",imager).toImageMsg();
         pub.publish(msg);
         i++;
