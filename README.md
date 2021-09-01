@@ -28,7 +28,7 @@ We'll show you how to create a network shared folder for use with this simulator
 
   - First create a folder named 'gta_live' in the home directory
   - Inside it create another folder named 'images'. This is where we will save the extracted images. 
-  - Then create an empty text file named pose.txt inside 'gta_live folder but outside 'images' folder. This is where we will save the poses of the extracted images.
+  - Then create an empty text file named pose.txt inside 'gta_live folder but outside 'images' folder. Make sure to alter its permissions so that others can also read and write. This way the Windows 10 PC can also write to this file. This is where we will save the poses of the extracted images.
   - Then right click on 'gta_live' folder
   - Open 'properties'
   - Click on 'Local Network Share' tab
@@ -41,17 +41,39 @@ Now the folder is shared, we just need to access it from the Windows 10 PC.
 **Windows 10 PC**
 
   - Double click on 'This PC'
-  - Right click on empty space and select teh option 'Add a network location'. A window will open up
-  - Click on 'Next'
+ 
+![Untitled](https://user-images.githubusercontent.com/74458556/131666942-259240d2-ae9f-4efa-be55-5847db83a77d.png)
+
+  - Right click on empty space and select the option 'Add a network location'. 
+ 
+![Untitled1](https://user-images.githubusercontent.com/74458556/131666950-75f124f2-6ca8-477e-adfb-3583ad70d8f7.png) 
+ 
+  - A window will open up. Click on 'Next'
+ 
+![Untitled2](https://user-images.githubusercontent.com/74458556/131666919-9d7ad242-e6fb-476f-95be-982401cd0dfc.png)
+
   - Then choose the 'Choose a custom network location' option or click on 'Next'
+
+![Untitled3](https://user-images.githubusercontent.com/74458556/131666924-191a3a98-ee0f-4d6e-b2df-41b7fae94914.png)
+
   - Here you enter the ip address and folder name in the dialog box as such:
   
         \\*ip address of Ubuntu 16.04 PC*\gta_live
+        
+![Untitled4](https://user-images.githubusercontent.com/74458556/131666928-c411d82d-f584-473a-86ef-217b65e6bd32.png)
+        
   - Click 'Next'
   - Next you can select a custom name for this network location according to your preferences. This will not affect how the location will be accesssed. You will still have to enter the location in the script as above.
+
+![Untitled5](https://user-images.githubusercontent.com/74458556/131666930-ffe21411-5a68-4cf7-b7b2-23941d313647.png)
+
   - Now the window will show a success message once the location is created. Click 'Finish'
+
+![Untitled6](https://user-images.githubusercontent.com/74458556/131666934-0bf5eeca-c820-4387-91e9-2aab022ba842.png)
+
   - You can now see your newly added network shared folder on 'This PC' under 'Network Locations'  
       
+![Untitled7](https://user-images.githubusercontent.com/74458556/131666938-ff94c9aa-b7dc-4206-9a52-e4882f7e66a4.png)
 
 ## Installation
 Once all the pre-requisites have been fulfilled we can begin to setup the simulator:
