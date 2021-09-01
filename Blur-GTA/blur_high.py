@@ -5,8 +5,7 @@ import numpy as np
 import cv2 as cv
 from time import sleep
 
-#dir = "/home/abrar/gta_live/images/"
-dir = "/home/abrar/gta_live/gta/gta_4b1/"
+dir = "/home/abrar/gta_live/images/"
 
 i = 4
 h = 480
