@@ -21,6 +21,38 @@ The following are the pre-requisites that need to fulfilled:
   - [Catkin Workspace](http://wiki.ros.org/ROS/Tutorials/InstallingandConfiguringROSEnvironment)
   - [ORB-SLAM](https://github.com/raulmur/ORB_SLAM)
 
+### Create a Network Shared Folder
+We'll show you how to create a network shared folder for use with this simulator:
+
+**Ubuntu 16.04 PC**
+
+  - First create a folder named 'gta_live' in the home directory
+  - Inside it create another folder named 'images'. This is where we will save the extracted images. 
+  - Then create an empty text file named pose.txt inside 'gta_live folder but outside 'images' folder. This is where we will save the poses of the extracted images.
+  - Then right click on 'gta_live' folder
+  - Open 'properties'
+  - Click on 'Local Network Share' tab
+  - Tick the 'Share this folder' box
+  - Also tick both the 'Allow others to create and delete files in this folder' and 'Guest access (for people without a user account)' boxes
+  - Then finally click on 'Create Share' button
+
+Now the folder is shared, we just need to access it from the Windows 10 PC.
+
+**Windows 10 PC**
+
+  - Double click on 'This PC'
+  - Right click on empty space and select teh option 'Add a network location'. A window will open up
+  - Click on 'Next'
+  - Then choose the 'Choose a custom network location' option or click on 'Next'
+  - Here you enter the ip address and folder name in the dialog box as such:
+  
+        \\*ip address of Ubuntu 16.04 PC*\gta_live
+  - Click 'Next'
+  - Next you can select a custom name for this network location according to your preferences. This will not affect how the location will be accesssed. You will still have to enter the location in the script as above.
+  - Now the window will show a success message once the location is created. Click 'Finish'
+  - You can now see your newly added network shared folder on 'This PC' under 'Network Locations'  
+      
+
 ## Installation
 Once all the pre-requisites have been fulfilled we can begin to setup the simulator:
 
