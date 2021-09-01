@@ -9,17 +9,17 @@ The following are the pre-requisites that need to fulfilled:
 
 **1) Windows 10 PC**
 
-  - GTA-V
-  - Microsoft Visual Studio 2017 atleast
+  - [GTA-V](https://store.steampowered.com/app/271590/Grand_Theft_Auto_V/)
+  - [Microsoft Visual Studio 2017](https://visualstudio.microsoft.com/downloads/) atleast
   - Working [G2D](https://github.com/dadung/G2D) source code
   - Network shared folder between Windows 10 and Ubuntu 16.04 PCs
 
 **2) Ubuntu 16.04 PC**
 
   - Network shared folder between Ubuntu 16.04 and Windows 10 PCs
-  - ROS Kinetic Kame
-  - Catkin Workspace folder
-  - ORB-SLAM
+  - [ROS Kinetic Kame](http://wiki.ros.org/kinetic/Installation)
+  - [Catkin Workspace](http://wiki.ros.org/ROS/Tutorials/InstallingandConfiguringROSEnvironment)
+  - [ORB-SLAM](https://github.com/raulmur/ORB_SLAM)
 
 ## Installation
 Once all the pre-requisites have been fulfilled we can begin to setup the simulator:
