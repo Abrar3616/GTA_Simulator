@@ -50,8 +50,8 @@ Once all necessary scripts and packages have been installed we can get started o
 
 **Ubuntu 16.04 PC**
 
-  - You can use the bash script provided to automatically execute the acripts after setting it based on how much motion blur is needed, if at all.
-  - This script will run ORB-SLAM and the blur node if required. The mapping will start.
+  - You can use the bash script provided to automatically execute the other scripts after adjusting it based on how much motion blur is needed, if at all.
+  - This script will run ORB-SLAM and the blur nodes if required. The mapping will start.
 
 Be sure to wait a few seconds for ORB-SLAM to setup before starting the extraction of images and 6D poses.
 
@@ -61,7 +61,7 @@ With Quaternions:
               
     # pathtoimage tx ty tz qx qy qz qw
     
-With Roll, Pitch and Yaw:
+With Roll, Pitch and Yaw in Degrees:
 
     # pathtoimage tx ty tz p r y
 
