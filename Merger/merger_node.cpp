@@ -21,23 +21,21 @@ int main(int argc, char* argv[])
 
     while(nh.ok())
     {
-      stringstream ss;
-      ss << "/home/abrar/gta_live/images/" << std::to_string(i) << ".jpg";
-      std::string image_name;
-      image_name =  ss.str();
-      image = cv::imread(image_name,CV_LOAD_IMAGE_COLOR);
-      if(!image.empty())
-      {
-        resize(image, imager, cv::Size(640, 480), 0, 0, CV_INTER_AREA);
-        msg = cv_bridge::CvImage(std_msgs::Header(),"bgr8",imager).toImageMsg();
-        pub.publish(msg);
-        i++;
-      }
-
-      //ROS_INFO_STREAM(image_name);
+        stringstream ss;
+        ss << "/home/abrar/gta_live/images/" << std::to_string(i) << ".jpg";
+        std::string image_name;
+        image_name =  ss.str();
+        image = cv::imread(image_name,CV_LOAD_IMAGE_COLOR);
+        if(!image.empty())
+        {
+            resize(image, imager, cv::Size(640, 480), 0, 0, CV_INTER_AREA);
+            msg = cv_bridge::CvImage(std_msgs::Header(),"bgr8",imager).toImageMsg();
+            pub.publish(msg);
+            i++;
+        }
+        //ROS_INFO_STREAM(image_name);
 
     	ros::spinOnce();
     	loop_rate.sleep();
     }
-
 }
