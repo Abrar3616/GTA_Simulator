@@ -10,7 +10,7 @@ The following are the pre-requisites that need to fulfilled:
 **1) Windows 10 PC**
 
   - [GTA-V](https://store.steampowered.com/app/271590/Grand_Theft_Auto_V/)
-  - [Microsoft Visual Studio 2017](https://visualstudio.microsoft.com/downloads/) atleast
+  - [Microsoft Visual Studio 2017](https://visualstudio.microsoft.com/downloads/) or above
   - Working [G2D](https://github.com/dadung/G2D) source code
   - Network shared folder between Windows 10 and Ubuntu 16.04 PCs
 
