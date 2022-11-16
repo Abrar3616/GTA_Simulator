@@ -7,6 +7,7 @@ The framework can be used as training/testing of SLAM in active setting, where t
 
 ## Pre-requisites
 Run following command in terminal
+
 *sudo apt-get install python3.5-dev && sudo apt-get install python3-tk && sudo apt-get install build-essential libxi-dev libglu1-mesa-dev libglew-dev libopencv-dev libvips && sudo apt install git && sudo apt install curl && libboost-all-dev* 
 
 ## About
