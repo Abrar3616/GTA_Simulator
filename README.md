@@ -44,7 +44,7 @@ http://wiki.ros.org/kinetic/Installation/Ubuntu
     ${PROJECT_SOURCE_DIR}/Thirdparty/g2o/lib/libg2o.so\
     )*
 
-  with
+    with
 
     *target_link_libraries(${PROJECT_NAME}\
     ${OpenCV_LIBS}\
