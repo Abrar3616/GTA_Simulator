@@ -98,8 +98,16 @@ http://wiki.ros.org/kinetic/Installation/Ubuntu
   - *python3 -m minos.tools.pygame_client*
   - *python3 -m minos.tools.pygame_client --dataset mp3d --scene_ids 17DRP5sb8fy  --env_config pointgoal_mp3d_s –save_png --depth*\
 
-  invoked from the root of the MINOS repository. You should see a live view which you can control with the W/A/S/D keys and the arrow keys. This client can be configured through various command line arguments. Run with the *--help* argument for an overview and try some of these other examples:
+  invoked from the root of the MINOS repository. You should see a live view which you can control with the W/A/S/D keys and the arrow keys. This client can be configured through various command line arguments. Run with the *--help* argument for an overview and try some of these other examples.
 
+## Interfacing MINOS and ORB-SLAM Together
+For merging purpose, we need to save simulator frames in a folder of our choice. Go to *minos/minos/lib/Simulator.py* and make the following changes:\
+
+- Replace lines 98-102 with \
+        *if 'logdir' in params:\
+            self._logdir = '/home/romi/frames'\ 
+        else:\
+            self._logdir = '/home/romi/frames'*
 
 
  
