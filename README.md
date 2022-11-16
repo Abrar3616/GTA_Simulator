@@ -118,7 +118,7 @@ For merging purpose, we need to save simulator frames in a folder of our choice.
          time.sleep(0.06)
          image.save(‘/home/romi/frames/color_.jpg’)
 
-- Create ROS Node (merger.cpp provider above)
+- Create ROS Node (merger.cpp provider above)\
   This ROS node is important for communication between MINOS and ORB-SLAM. Simply paste the attached ROS node (*merger.cpp*) in *catkin_ws/src* and do necessary changes to *CmakeList.txt* by uncommenting the following:
   ```
          add_compile_options(-std=c++11)
@@ -127,7 +127,18 @@ For merging purpose, we need to save simulator frames in a folder of our choice.
          ${catkin_LIBRARIES}
          )
 ```
- 
+  and adding the following
+  ```
+  find_package(catkin REQUIRED COMPONENTS
+  roscpp
+  rospy
+  std_msgs
+  image_transport
+  std_msgs
+  cv_bridge
+  )
+  ```
+
 
 ## About
 GTA_Simulator is a realtime simulator that uses GTA-V as the source and has the option to add three levels of motion blur to the source. It extracts images and 6D poses against those images from the GTA-V game using the ScriptHookV library. It is based on G2D: from GTA to Data by Anh-Dzung Doan et. al. However in contrast to that work we propose a realtime data extraction algorithm. After extraction, these images and 6D poses are then saved in a network shared folder for another PC to access and use for mapping etc. This System uses two PC's with GPUs, one a windows 10 PC that runs the GTA-V game and the data extraction algorithm and one a Ubuntu 16.04 PC that uses that data as a feed to a mapping algorithm like ORB-SLAM etc. with or without added motion blur.
