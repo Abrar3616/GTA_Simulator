@@ -139,6 +139,10 @@ For merging purpose, we need to save simulator frames in a folder of our choice.
   cv_bridge
   )
   ```
+  
+- Finally compile by *catkin_make* and test by running following command:
+  
+  ``` rosrun merger merger_node ```
 
 
 ## About
