@@ -105,9 +105,9 @@ For merging purpose, we need to save simulator frames in a folder of our choice.
 
 - Replace lines 98-102 with (with your own folder address) 
 
-        *if 'logdir' in params:\
-              self._logdir = '/home/romi/frames'\ 
-        else:\
+        *if 'logdir' in params:
+              self._logdir = '/home/romi/frames'
+        else:
               self._logdir = '/home/romi/frames'*
 
 
