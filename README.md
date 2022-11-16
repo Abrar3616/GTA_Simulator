@@ -19,14 +19,10 @@ http://wiki.ros.org/kinetic/Installation/Ubuntu
   
   Go into Thirdparty/g2o/ and execute:
   
-  *sh
-  
-  mkdir build
-  
-  cd build
-  
-  cmake .. -DCMAKE_BUILD_TYPE=Release
-  
+  *sh\
+  mkdir build\
+  cd build\
+  cmake .. -DCMAKE_BUILD_TYPE=Release\
   make* 
   
 - Build DBoW2. Go into Thirdparty/DBoW2/ and run:
