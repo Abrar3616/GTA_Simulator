@@ -70,6 +70,32 @@ http://wiki.ros.org/kinetic/Installation/Ubuntu
 - git clone: https://github.com/minosworld/minos
 - Download the v0.7x version of the repository\
   Now go to the minos folder, press *Ctrl+h* and copy the *.git* folder. Paste this *.git* folder to the *minos0.7x* folder. Delete the minos folder and change the name of *minos0.7x* folder to minos.
+- Open the minos folder and open terminal on it.
+- Install *node.js* using the Node Version Manager (nvm).
+  *curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.7/install.sh | bash\
+  source ~/.bashrc\
+  nvm install 8.11.3\
+  nvm alias default 8.11.3*
+
+  OR
+  
+  *nvm install v10.13.0\
+  nvm alias default 10.13.0*
+  
+- Build the MINOS server modules inside the server directory by:
+  *npm install -g yarn\
+  yarn install*
+
+  OR (not recommended)
+
+  *npm install*
+  
+  This process will download and compile all server module dependencies and might take a few minutes.
+  
+- Install the minos Python module by running *pip3 install -e* in the root of the repository or *pip3 install -e . -r requirements.txt*
+
+
+
  
 
 ## About
