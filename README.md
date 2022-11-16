@@ -8,9 +8,9 @@ The framework can be used as training/testing of SLAM in active setting, where t
 ## Pre-requisites
 Run following commands in terminal to install pre-requisite libraries.
 
-    ```
+
     sudo apt-get install python3.5-dev && sudo apt-get install python3-tk && sudo apt-get install build-essential libxi-dev libglu1-mesa-dev libglew-dev libopencv-dev libvips && sudo apt install git && sudo apt install curl && libboost-all-dev
-    ```
+ 
 
 ## Install ROS Kinect Kame (tested, but other version also possible)
 http://wiki.ros.org/kinetic/Installation/Ubuntu
