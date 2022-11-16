@@ -1,4 +1,4 @@
-# MINOS+SLAM Interface 
+# Our MINOS+SLAM Interface 
 Our framework allows seamless integration of visual SLAM with simulator (MINOS in this case), where the agent moves within the simulator, and in parallel visual SLAM (ORB-SLAM in this case) is run on the front view camera of the agent.
 
 The framework can be used as training/testing of SLAM in active setting, where the agent is required to evaluate the effects (e.g. the safety with respect to tracking) of current step before planning the next motion. Please refer to [1] to see our framework being used in active setting for reliable tracking.
@@ -8,7 +8,7 @@ The framework can be used as training/testing of SLAM in active setting, where t
 ## Pre-requisites
 Run following commands in terminal to install pre-requisite libraries.
 
-*sudo apt-get install python3.5-dev && sudo apt-get install python3-tk && sudo apt-get install build-essential libxi-dev libglu1-mesa-dev libglew-dev libopencv-dev libvips && sudo apt install git && sudo apt install curl && libboost-all-dev* 
+    ```sudo apt-get install python3.5-dev && sudo apt-get install python3-tk && sudo apt-get install build-essential libxi-dev libglu1-mesa-dev libglew-dev libopencv-dev libvips && sudo apt install git && sudo apt install curl && libboost-all-dev```
 
 ## Install ROS Kinect Kame (tested, but other version also possible)
 http://wiki.ros.org/kinetic/Installation/Ubuntu
@@ -18,40 +18,46 @@ http://wiki.ros.org/kinetic/Installation/Ubuntu
 - After dwnload is complete, build third party packages, build g2o. 
   
   Go into Thirdparty/g2o/ and execute:
-  
-  *sh\
-  mkdir build\
-  cd build\
-  cmake .. -DCMAKE_BUILD_TYPE=Release\
-  make* 
+ 
+ ``` 
+  sh
+  mkdir build
+  cd build
+  cmake .. -DCMAKE_BUILD_TYPE=Release
+  make
+ ```
   
 - Build DBoW2. Go into Thirdparty/DBoW2/ and run:
-
-  *mkdir build\
-  cd build\
-  cmake .. -DCMAKE_BUILD_TYPE=Release\
-  make*  
-
+ ```
+  mkdir build
+  cd build
+  cmake .. -DCMAKE_BUILD_TYPE=Release
+  make
+```
 - A few changes need to be done before building ORB_SLAM. After compiling thirdparty g2o and DBoW2, before building ORB_SLAM
   - In *src/ORBextractor.cc* include OpenCV library:  *#include <opencv2/opencv.hpp>* 	
   - Remove opencv2 dependency from *manifest.xml*
   - In *CmakeList.txt*, add *lboost* as target link library which can be done by replacing
 
-    *target_link_libraries(${PROJECT_NAME}\
-    ${OpenCV_LIBS}\
-    ${EIGEN3_LIBS}\
-    ${PROJECT_SOURCE_DIR}/Thirdparty/DBoW2/lib/libDBoW2.so\
-    ${PROJECT_SOURCE_DIR}/Thirdparty/g2o/lib/libg2o.so\
-    )*
+```
+    target_link_libraries(${PROJECT_NAME}
+    ${OpenCV_LIBS}
+    ${EIGEN3_LIBS}
+    ${PROJECT_SOURCE_DIR}/Thirdparty/DBoW2/lib/libDBoW2.so
+    ${PROJECT_SOURCE_DIR}/Thirdparty/g2o/lib/libg2o.so
+    )
+    ```
 
     with
 
-    *target_link_libraries(${PROJECT_NAME}\
-    ${OpenCV_LIBS}\
-    ${EIGEN3_LIBS}\
-    ${PROJECT_SOURCE_DIR}/Thirdparty/DBoW2/lib/libDBoW2.so\
-    ${PROJECT_SOURCE_DIR}/Thirdparty/g2o/lib/libg2o.so-lboost_system\
-    )*
+```
+    target_link_libraries(${PROJECT_NAME}
+    ${OpenCV_LIBS}
+    ${EIGEN3_LIBS}
+    ${PROJECT_SOURCE_DIR}/Thirdparty/DBoW2/lib/libDBoW2.so
+    ${PROJECT_SOURCE_DIR}/Thirdparty/g2o/lib/libg2o.so-lboost_system
+    )
+    ```
 
   - Install eigen form here: https://launchpad.net/ubuntu/trusty/amd64/libeigen3-dev/3.2.0-8
 
