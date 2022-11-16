@@ -37,39 +37,35 @@ http://wiki.ros.org/kinetic/Installation/Ubuntu
   - Remove opencv2 dependency from *manifest.xml*
   - In *CmakeList.txt*, add *lboost* as target link library which can be done by replacing
 
-    target_link_libraries(${PROJECT_NAME}
-    ${OpenCV_LIBS}
-    ${EIGEN3_LIBS}
-    ${PROJECT_SOURCE_DIR}/Thirdparty/DBoW2/lib/libDBoW2.so
-    ${PROJECT_SOURCE_DIR}/Thirdparty/g2o/lib/libg2o.so
-    )
+    *target_link_libraries(${PROJECT_NAME}\
+    ${OpenCV_LIBS}\
+    ${EIGEN3_LIBS}\
+    ${PROJECT_SOURCE_DIR}/Thirdparty/DBoW2/lib/libDBoW2.so\
+    ${PROJECT_SOURCE_DIR}/Thirdparty/g2o/lib/libg2o.so\
+    )*
 
 with
 
- target_link_libraries(${PROJECT_NAME}
- ${OpenCV_LIBS}
- ${EIGEN3_LIBS}
- ${PROJECT_SOURCE_DIR}/Thirdparty/DBoW2/lib/libDBoW2.so
- ${PROJECT_SOURCE_DIR}/Thirdparty/g2o/lib/libg2o.so
- -lboost_system
- )
+    *target_link_libraries(${PROJECT_NAME}\
+    ${OpenCV_LIBS}\
+    ${EIGEN3_LIBS}\
+    ${PROJECT_SOURCE_DIR}/Thirdparty/DBoW2/lib/libDBoW2.so\
+    ${PROJECT_SOURCE_DIR}/Thirdparty/g2o/lib/libg2o.so\
+    -lboost_system\
+    )*
 
-  - Install eigen form here https://launchpad.net/ubuntu/trusty/amd64/libeigen3-dev/3.2.0-8
+  - Install eigen form here: https://launchpad.net/ubuntu/trusty/amd64/libeigen3-dev/3.2.0-8
 
+    Download the debian file and install using\ 
+    *sudo dpkg -i libeigen3-dev_3.2.0-8_all.deb*
 
-Download the debian file and install using 
-sudo dpkg -i libeigen3-dev_3.2.0-8_all.deb
+- Before building ORB-SLAM run this in terminal, (change PC name accordingly)
 
-- Before building ORB_SLAM run this is terminal, (change PC name accordingly)
-
-export ROS_PACKAGE_PATH=${ROS_PACKAGE_PATH}:/home/romi
-then run:
-roslaunch ORB_SLAM ExampleGroovyOrNewer.launch
-IN THE FILE … ROB_SLAM/SRC/TRACKING.CC 
-
-on line 163 use following line:
-
-ros::Subscriber sub = nodeHandler.subscribe("/usb_cam/image_raw", 1, &Tracking::GrabImage, this);
+  *export ROS_PACKAGE_PATH=${ROS_PACKAGE_PATH}:/home/romi*\
+  then run:\
+  *roslaunch ORB_SLAM ExampleGroovyOrNewer.launch*\
+  IN THE FILE … *ROB_SLAM/SRC/TRACKING.CC*, on line 163 use following line:\
+  *ros::Subscriber sub = nodeHandler.subscribe("/usb_cam/image_raw", 1, &Tracking::GrabImage, this);*
 
 
 ## About
