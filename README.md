@@ -1,5 +1,7 @@
-# GTA_Simulator
-A realtime simulator with motion blur for computor vision community using Grand Theft Auto V (GTA-V)
+# MINOS+SLAM Interface 
+Our framework allows seamless integration of visual SLAM with simulator (MINOS in this case), where the agent moves within the simulator, and in parallel visual SLAM (ORB-SLAM in this case) is run on the front view camera of the agent.
+
+The framework can be used as training/testing of SLAM in active setting, where the agent is required to evaluate the effects (e.g. the safety with respect to tracking) of current step before planning the next motion. Please refer to [1] to see our framework being used in active setting for reliable tracking.
 
 ## About
 GTA_Simulator is a realtime simulator that uses GTA-V as the source and has the option to add three levels of motion blur to the source. It extracts images and 6D poses against those images from the GTA-V game using the ScriptHookV library. It is based on G2D: from GTA to Data by Anh-Dzung Doan et. al. However in contrast to that work we propose a realtime data extraction algorithm. After extraction, these images and 6D poses are then saved in a network shared folder for another PC to access and use for mapping etc. This System uses two PC's with GPUs, one a windows 10 PC that runs the GTA-V game and the data extraction algorithm and one a Ubuntu 16.04 PC that uses that data as a feed to a mapping algorithm like ORB-SLAM etc. with or without added motion blur.
