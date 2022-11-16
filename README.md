@@ -15,14 +15,19 @@ http://wiki.ros.org/kinetic/Installation/Ubuntu
 
 ## Install ORB-SLAM (as ROS node)
 - At home type: git clone  “https://github.com/raulmur/ORB_SLAM” 
-- After Download is complete, build Thirdparty packages, build g2o. 
+- After dwnload is complete, build third party packages, build g2o. 
   
   Go into Thirdparty/g2o/ and execute:
-  sh
+  
+  *sh
+  
   mkdir build
+  
   cd build
+  
   cmake .. -DCMAKE_BUILD_TYPE=Release
-  make 
+  
+  make* 
   
 - Build DBoW2. Go into Thirdparty/DBoW2/ and run:
 
