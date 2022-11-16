@@ -120,12 +120,13 @@ For merging purpose, we need to save simulator frames in a folder of our choice.
 
 - Create ROS Node (merger.cpp provider above)
   This ROS node is important for communication between MINOS and ORB-SLAM. Simply paste the attached ROS node (*merger.cpp*) in *catkin_ws/src* and do necessary changes to *CmakeList.txt* by uncommenting the following:
+  ```
          add_compile_options(-std=c++11)
          add_executable(${PROJECT_NAME}_node src/merger.cpp)
          target_link_libraries(${PROJECT_NAME}_node
          ${catkin_LIBRARIES}
          )
-
+```
  
 
 ## About
