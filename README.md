@@ -94,6 +94,11 @@ http://wiki.ros.org/kinetic/Installation/Ubuntu
   
 - Install the minos Python module by running *pip3 install -e* in the root of the repository or *pip3 install -e . -r requirements.txt*
 
+- Before running MINOS copy the Materport3D and SUNCG datasets in the work folder. Check that everything works by running the interactive client through \
+  - *python3 -m minos.tools.pygame_client*
+  - *python3 -m minos.tools.pygame_client --dataset mp3d --scene_ids 17DRP5sb8fy  --env_config pointgoal_mp3d_s –save_png --depth*\
+invoked from the root of the MINOS repository. You should see a live view which you can control with the W/A/S/D keys and the arrow keys. This client can be configured through various command line arguments. Run with the *--help* argument for an overview and try some of these other examples:
+
 
 
  
