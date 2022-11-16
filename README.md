@@ -110,6 +110,14 @@ For merging purpose, we need to save simulator frames in a folder of our choice.
         else:
               self._logdir = '/home/romi/frames'*
 
+- Replace lines 422-428 with (with your own folder address) 
+
+        *if self.params.get(‘save_png’):
+         if image is None:
+              image = Image.frombytes(mode,(data.shape[0], data.shape[1]),data)
+         time.sleep(0.06)
+         image.save(‘/home/romi/frames/color_.jpg’)*
+
 
  
 
