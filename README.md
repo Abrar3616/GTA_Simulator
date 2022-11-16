@@ -68,7 +68,7 @@ http://wiki.ros.org/kinetic/Installation/Ubuntu
 
 ## Install MINOS
 - git clone: https://github.com/minosworld/minos
-- Download the v0.7x version of the repository
+- Download the v0.7x version of the repository\
   Now go to the minos folder, press *Ctrl+h* and copy the *.git* folder. Paste this *.git* folder to the *minos0.7x* folder. Delete the minos folder and change the name of *minos0.7x* folder to minos.
  
 
