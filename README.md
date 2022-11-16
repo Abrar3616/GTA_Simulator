@@ -6,9 +6,74 @@ The framework can be used as training/testing of SLAM in active setting, where t
 # MINOS+SLAM Integration (Step-by-Step)
 
 ## Pre-requisites
-Run following command in terminal
+Run following commands in terminal to install pre-requisite libraries.
 
 *sudo apt-get install python3.5-dev && sudo apt-get install python3-tk && sudo apt-get install build-essential libxi-dev libglu1-mesa-dev libglew-dev libopencv-dev libvips && sudo apt install git && sudo apt install curl && libboost-all-dev* 
+
+## Install ROS Kinect Kame (tested, but other version also possible)
+http://wiki.ros.org/kinetic/Installation/Ubuntu
+
+## Install ORB-SLAM (as ROS node)
+- At home type: git clone  “https://github.com/raulmur/ORB_SLAM” 
+- After Download is complete, build Thirdparty packages, build g2o. 
+  
+  Go into Thirdparty/g2o/ and execute:
+  sh
+  mkdir build
+  cd build
+  cmake .. -DCMAKE_BUILD_TYPE=Release
+  make 
+  
+- Build DBoW2. Go into Thirdparty/DBoW2/ and run:
+
+  mkdir build
+  cd build
+  cmake .. -DCMAKE_BUILD_TYPE=Release
+  make  
+
+- A few changes need to be done before building ORB_SLAM. After compiling thirdparty g2o and DBoW2, before building ORB_SLAM
+
+(a)	In src/ORBextractor.cc include OpenCV library:  #include <opencv2/opencv.hpp> 	
+
+(b) Remove opencv2 dependency from manifest.xml
+
+(c)	In CmakeList.txt, add lboost as target link library which can be done by replacing
+
+ target_link_libraries(${PROJECT_NAME}
+ ${OpenCV_LIBS}
+ ${EIGEN3_LIBS}
+ ${PROJECT_SOURCE_DIR}/Thirdparty/DBoW2/lib/libDBoW2.so
+ ${PROJECT_SOURCE_DIR}/Thirdparty/g2o/lib/libg2o.so
+ )
+
+with
+
+ target_link_libraries(${PROJECT_NAME}
+ ${OpenCV_LIBS}
+ ${EIGEN3_LIBS}
+ ${PROJECT_SOURCE_DIR}/Thirdparty/DBoW2/lib/libDBoW2.so
+ ${PROJECT_SOURCE_DIR}/Thirdparty/g2o/lib/libg2o.so
+ -lboost_system
+ )
+
+(d) Install eigen form here https://launchpad.net/ubuntu/trusty/amd64/libeigen3-dev/3.2.0-8
+
+
+Download the debian file and install using 
+sudo dpkg -i libeigen3-dev_3.2.0-8_all.deb
+
+
+•	Before building ORB_SLAM run this is terminal, (change PC name accordingly)
+
+export ROS_PACKAGE_PATH=${ROS_PACKAGE_PATH}:/home/romi
+then run:
+roslaunch ORB_SLAM ExampleGroovyOrNewer.launch
+IN THE FILE … ROB_SLAM/SRC/TRACKING.CC 
+
+on line 163 use following line:
+
+ros::Subscriber sub = nodeHandler.subscribe("/usb_cam/image_raw", 1, &Tracking::GrabImage, this);
+
 
 ## About
 GTA_Simulator is a realtime simulator that uses GTA-V as the source and has the option to add three levels of motion blur to the source. It extracts images and 6D poses against those images from the GTA-V game using the ScriptHookV library. It is based on G2D: from GTA to Data by Anh-Dzung Doan et. al. However in contrast to that work we propose a realtime data extraction algorithm. After extraction, these images and 6D poses are then saved in a network shared folder for another PC to access and use for mapping etc. This System uses two PC's with GPUs, one a windows 10 PC that runs the GTA-V game and the data extraction algorithm and one a Ubuntu 16.04 PC that uses that data as a feed to a mapping algorithm like ORB-SLAM etc. with or without added motion blur.
