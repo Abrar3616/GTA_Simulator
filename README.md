@@ -27,10 +27,10 @@ http://wiki.ros.org/kinetic/Installation/Ubuntu
   
 - Build DBoW2. Go into Thirdparty/DBoW2/ and run:
 
-  mkdir build
-  cd build
-  cmake .. -DCMAKE_BUILD_TYPE=Release
-  make  
+  *mkdir build\
+  cd build\
+  cmake .. -DCMAKE_BUILD_TYPE=Release\
+  make*  
 
 - A few changes need to be done before building ORB_SLAM. After compiling thirdparty g2o and DBoW2, before building ORB_SLAM
 
