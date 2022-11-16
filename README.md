@@ -33,12 +33,9 @@ http://wiki.ros.org/kinetic/Installation/Ubuntu
   make*  
 
 - A few changes need to be done before building ORB_SLAM. After compiling thirdparty g2o and DBoW2, before building ORB_SLAM
-
-(a)	In src/ORBextractor.cc include OpenCV library:  #include <opencv2/opencv.hpp> 	
-
-(b) Remove opencv2 dependency from manifest.xml
-
-(c)	In CmakeList.txt, add lboost as target link library which can be done by replacing
+  - In src/ORBextractor.cc include OpenCV library:  #include <opencv2/opencv.hpp> 	
+  - Remove opencv2 dependency from manifest.xml
+  - In CmakeList.txt, add lboost as target link library which can be done by replacing
 
  target_link_libraries(${PROJECT_NAME}
  ${OpenCV_LIBS}
@@ -57,14 +54,13 @@ with
  -lboost_system
  )
 
-(d) Install eigen form here https://launchpad.net/ubuntu/trusty/amd64/libeigen3-dev/3.2.0-8
+  - Install eigen form here https://launchpad.net/ubuntu/trusty/amd64/libeigen3-dev/3.2.0-8
 
 
 Download the debian file and install using 
 sudo dpkg -i libeigen3-dev_3.2.0-8_all.deb
 
-
-•	Before building ORB_SLAM run this is terminal, (change PC name accordingly)
+- Before building ORB_SLAM run this is terminal, (change PC name accordingly)
 
 export ROS_PACKAGE_PATH=${ROS_PACKAGE_PATH}:/home/romi
 then run:
