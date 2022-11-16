@@ -103,11 +103,12 @@ http://wiki.ros.org/kinetic/Installation/Ubuntu
 ## Interfacing MINOS and ORB-SLAM Together
 For merging purpose, we need to save simulator frames in a folder of our choice. Go to *minos/minos/lib/Simulator.py* and make the following changes:\
 
-- Replace lines 98-102 with \
+- Replace lines 98-102 with (with your own folder address) 
+
         *if 'logdir' in params:\
-            self._logdir = '/home/romi/frames'\ 
+              self._logdir = '/home/romi/frames'\ 
         else:\
-            self._logdir = '/home/romi/frames'*
+              self._logdir = '/home/romi/frames'*
 
 
  
