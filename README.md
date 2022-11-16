@@ -50,8 +50,7 @@ with
     ${OpenCV_LIBS}\
     ${EIGEN3_LIBS}\
     ${PROJECT_SOURCE_DIR}/Thirdparty/DBoW2/lib/libDBoW2.so\
-    ${PROJECT_SOURCE_DIR}/Thirdparty/g2o/lib/libg2o.so\
-    -lboost_system\
+    ${PROJECT_SOURCE_DIR}/Thirdparty/g2o/lib/libg2o.so-lboost_system\
     )*
 
   - Install eigen form here: https://launchpad.net/ubuntu/trusty/amd64/libeigen3-dev/3.2.0-8
@@ -64,7 +63,7 @@ with
   *export ROS_PACKAGE_PATH=${ROS_PACKAGE_PATH}:/home/romi*\
   then run:\
   *roslaunch ORB_SLAM ExampleGroovyOrNewer.launch*\
-  IN THE FILE … *ROB_SLAM/SRC/TRACKING.CC*, on line 163 use following line:\
+  In the file … *ROB_SLAM/SRC/TRACKING.CC*, on line 163 use following line:\
   *ros::Subscriber sub = nodeHandler.subscribe("/usb_cam/image_raw", 1, &Tracking::GrabImage, this);*
 
 
