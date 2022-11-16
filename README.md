@@ -126,8 +126,9 @@ For merging purpose, we need to save simulator frames in a folder of our choice.
          target_link_libraries(${PROJECT_NAME}_node
          ${catkin_LIBRARIES}
          )
-```
+  ```
   and adding the following
+  
   ```
   find_package(catkin REQUIRED COMPONENTS
   roscpp
