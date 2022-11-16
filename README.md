@@ -147,6 +147,30 @@ For merging purpose, we need to save simulator frames in a folder of our choice.
 ## Camera Calibration Parameters for ORB-SLAM.
 In order to obtain features quickly, we need to make sure that the Camera Calibration parameters are set according to MINOS. Using the calibration method explained in our paper, we have calibrated MINOS front view camera, for Matterport3D indoor scenes (parameters provided below). These settings must be set in ```/ORB_SLAM/Data/Settings.yaml```:
 
+```
+      %YAML:1.0
+
+      # Camera Parameters. Adjust them!
+
+      # Camera calibration parameters (OpenCV) 
+      Camera.fx: 890.246939
+      Camera.fy: 889.082597
+      Camera.cx: 378.899791
+      Camera.cy: 210.334985
+
+      # Camera distortion parameters (OpenCV) --
+      Camera.k1: 0.224181
+      Camera.k2: -1.149847
+      Camera.p1: 0.007295
+      Camera.p2: 0.0
+
+      # Camera frames per second 
+      Camera.fps: 10
+
+      # Color order of the images (0: BGR, 1: RGB. It is ignored if images are grayscale)
+      Camera.RGB: 1
+```
+
 ## About
 GTA_Simulator is a realtime simulator that uses GTA-V as the source and has the option to add three levels of motion blur to the source. It extracts images and 6D poses against those images from the GTA-V game using the ScriptHookV library. It is based on G2D: from GTA to Data by Anh-Dzung Doan et. al. However in contrast to that work we propose a realtime data extraction algorithm. After extraction, these images and 6D poses are then saved in a network shared folder for another PC to access and use for mapping etc. This System uses two PC's with GPUs, one a windows 10 PC that runs the GTA-V game and the data extraction algorithm and one a Ubuntu 16.04 PC that uses that data as a feed to a mapping algorithm like ORB-SLAM etc. with or without added motion blur.
 
