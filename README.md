@@ -33,16 +33,16 @@ http://wiki.ros.org/kinetic/Installation/Ubuntu
   make*  
 
 - A few changes need to be done before building ORB_SLAM. After compiling thirdparty g2o and DBoW2, before building ORB_SLAM
-  - In src/ORBextractor.cc include OpenCV library:  #include <opencv2/opencv.hpp> 	
-  - Remove opencv2 dependency from manifest.xml
-  - In CmakeList.txt, add lboost as target link library which can be done by replacing
+  - In *src/ORBextractor.cc* include OpenCV library:  *#include <opencv2/opencv.hpp>* 	
+  - Remove opencv2 dependency from *manifest.xml*
+  - In *CmakeList.txt*, add *lboost* as target link library which can be done by replacing
 
- target_link_libraries(${PROJECT_NAME}
- ${OpenCV_LIBS}
- ${EIGEN3_LIBS}
- ${PROJECT_SOURCE_DIR}/Thirdparty/DBoW2/lib/libDBoW2.so
- ${PROJECT_SOURCE_DIR}/Thirdparty/g2o/lib/libg2o.so
- )
+    target_link_libraries(${PROJECT_NAME}
+    ${OpenCV_LIBS}
+    ${EIGEN3_LIBS}
+    ${PROJECT_SOURCE_DIR}/Thirdparty/DBoW2/lib/libDBoW2.so
+    ${PROJECT_SOURCE_DIR}/Thirdparty/g2o/lib/libg2o.so
+    )
 
 with
 
