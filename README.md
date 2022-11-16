@@ -6,7 +6,7 @@ https://user-images.githubusercontent.com/31276182/202145595-f90d3f0b-5c31-4bf8-
 
 
 
-The framework can be used as training/testing of SLAM in active setting, where the agent is required to evaluate the effects (e.g. the safety with respect to tracking) of current step before planning the next motion. Please refer to [1] to see our framework being used in active setting for reliable tracking.
+The framework can be used as training/testing of SLAM in active setting, where the agent is required to evaluate the effects (e.g. the safety with respect to tracking) of current step before planning the next motion. Please refer to [DQN-SLAM](https://github.com/knaveed20/Deep-Introspective-SLAM/) to see our framework being used in active setting for reliable tracking.
 
 # MINOS+SLAM Integration (Step-by-Step)
 
