@@ -358,7 +358,6 @@ With Pitch, Roll and Yaw in Degrees:
 ## ORBSLAM and ORBSLAM3 Comparison
 These are the links to the datasets on which ORBSLAM and ORBSLAM3 were compared:
 
-- [MINOS Datasets for ORBSLAM3](https://drive.google.com/drive/folders/1iDRRug1AiDDXy9CsOzIch_M3QqtdbFBa?usp=sharing)
 - [MINOS Loop Closure data](https://drive.google.com/drive/folders/1JxMR5Dj0yQgMuo7TB6SFij7jwUpyAUK6?usp=share_link)
 - [GTA-V Datasets for ORBSLAM3](https://drive.google.com/drive/folders/14ngM6XH_hETcywOdPr9Pvkdmbr6eIRHX?usp=share_link)
 
