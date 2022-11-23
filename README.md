@@ -216,7 +216,7 @@ In order to obtain features quickly, we need to make sure that the Camera Calibr
       # Color order of the images (0: BGR, 1: RGB. It is ignored if images are grayscale)
       Camera.RGB: 1
 ```
-
+# Our GTA_Simulator
 ## About
 GTA_Simulator is a realtime simulator that uses GTA-V as the source and has the option to add three levels of motion blur to the source. It extracts images and 6D poses against those images from the GTA-V game using the ScriptHookV library. It is based on G2D: from GTA to Data by Anh-Dzung Doan et. al. However in contrast to that work we propose a realtime data extraction algorithm. After extraction, these images and 6D poses are then saved in a network shared folder for another PC to access and use for mapping etc. This System uses two PC's with GPUs, one a windows 10 PC that runs the GTA-V game and the data extraction algorithm and one a Ubuntu 16.04 PC that uses that data as a feed to a mapping algorithm like ORB-SLAM etc. with or without added motion blur.
 
