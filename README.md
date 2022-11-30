@@ -355,11 +355,11 @@ With Pitch, Roll and Yaw in Degrees:
 
     # pathtoimage tx ty tz p r y
 
-## Augmenting TartanAir Dataset with Tracking and LC Grouth Truth
-# Track Loss
+# Augmenting TartanAir Dataset with Tracking and LC Grouth Truth
+## Track Loss
 We have augmented complete TartanAir dataset (369 sequences) with tracking failure using ORB-SLAM and SVO 2.0. The results are provided in TartanAir Tracking and LC Results (ORB-SLAM+SVO).xlsx uploaded in file section of this repository. The file contains separate results for ORB-SLAM and SVO. In the colum named 'Track Loss Frame', the position of track loss is identified for each system (ORB-SLAM and SVO). If the column contains, say, 40-50, it means the tracking is lost somewhere between frame number 40 and 50. If there are two values, such as 40-50, 300-310, it indicates track loss twice at respective positions.
 
-# Loop Closure Ground Truth
+## Loop Closure Ground Truth
 Lool closure has similarly been labeled for complete TartanAir dataset. The following two cases can be segregated:
 - **Manual Ground Truth**: We manually inspected all 369 sequences to generate loop closure grouth truth (look for revisited scenes). Results are reported in TartanAir Tracking and LC Results (ORB-SLAM+SVO).xlsx (column named Loop Closure GT). The results must be interpreted carefully. The entity 550-560-1165-1175 indicates one loop closure (two scenes) with frames numbers 550-560 as first scene, and frame numbers 1165-1175 as the revisited scene. There are situations where same scene is revisted twice (or more). This is indicated by e.g. 20-50-1120-1130-1580-1600 (20-50 first visit, 1120-1130 first revisit, 1580-1600 second revisit. Finally, there are sequences where there are two separate loop closures i.e. two different scenes being revisited. These has been separated with a comma (,) such as 420-430-950-960, 645-655-1190-1200.
 
