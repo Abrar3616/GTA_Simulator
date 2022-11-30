@@ -365,11 +365,11 @@ Lool closure has similarly been labeled for complete TartanAir dataset. The foll
 
 - **ORB-SLAM Performance on LCs**: The performance of ORB-SLAM loop closure on TartanAir dataset is given in column named 'Loop Closure Frame (ORB-SLAM)'. The frames are indicated in the same pattern as grouth truth column.
 
-## ORBSLAM and ORBSLAM3 Comparison
-These are the links to the datasets on which ORBSLAM and ORBSLAM3 were compared:
+# Our Datasets
+Our main dataset, MINOS Exploration, is a dataset containg hard cases of loop closures. We also release GTA blur datasets for the community to explore. The datasets can be downloaded from the Google Drive links below.
 
-- [MINOS Loop Closure data](https://drive.google.com/drive/folders/1JxMR5Dj0yQgMuo7TB6SFij7jwUpyAUK6?usp=share_link)
-- [GTA-V Datasets for ORBSLAM3](https://drive.google.com/drive/folders/14ngM6XH_hETcywOdPr9Pvkdmbr6eIRHX?usp=share_link)
+- [MINOS Exploration] (https://drive.google.com/drive/folders/1JxMR5Dj0yQgMuo7TB6SFij7jwUpyAUK6?usp=share_link)
+- [GTA-V Blur Dataset] (https://drive.google.com/drive/folders/14ngM6XH_hETcywOdPr9Pvkdmbr6eIRHX?usp=share_link)
 
 ## License
 This work and any data acquired from this work is for educational and research purposes only. Any commercial use is strictly prohibited.
