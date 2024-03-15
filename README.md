@@ -1,12 +1,12 @@
 # Our MINOS+SLAM Interface 
-Our framework allows seamless integration of visual SLAM with simulator (MINOS in this case), where the agent moves within the simulator, and in parallel visual SLAM (ORB-SLAM in this case) is run on the front view camera of the agent.
+Our framework allows a seamless integration of visual SLAM with a simulator (MINOS in this case), where the agent moves within the simulator, and in parallel visual SLAM (ORB-SLAM in this case) is run on the front view camera of the agent.
 
 
 https://user-images.githubusercontent.com/31276182/202145595-f90d3f0b-5c31-4bf8-83c4-107c54ecb428.mp4
 
 
 
-The framework can be used as training/testing of SLAM in active setting, where the agent is required to evaluate the effects (e.g. the safety with respect to tracking) of current step before planning the next motion. Please refer to [DQN-SLAM](https://github.com/knaveed20/Deep-Introspective-SLAM/) to see our framework being used in active setting for reliable tracking.
+The framework can be used for training/testing of SLAM in an active setting, where the agent is required to evaluate the effects (e.g. the safety with respect to tracking) of current step before planning the next motion. Please refer to [DQN-SLAM](https://github.com/knaveed20/Deep-Introspective-SLAM/) to see our framework being used in active setting for reliable tracking.
 
 # MINOS+SLAM Integration (Step-by-Step)
 
