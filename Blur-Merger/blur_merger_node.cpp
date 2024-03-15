@@ -25,6 +25,7 @@ int main(int argc, char* argv[])
         std::string image_name;
         image_name =  ss.str();
         image = cv::imread(image_name,CV_LOAD_IMAGE_COLOR);
+        
         if(!image.empty())
         {
             msg = cv_bridge::CvImage(std_msgs::Header(),"bgr8",image).toImageMsg();
