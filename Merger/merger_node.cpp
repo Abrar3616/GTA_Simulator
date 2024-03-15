@@ -1,9 +1,9 @@
-#include <ros/ros.h>
-#include <iostream>
 #include <string>
-#include <image_transport/image_transport.h>
-#include <opencv2/highgui/highgui.hpp>
+#include <iostream>
+#include <ros/ros.h>
 #include <cv_bridge/cv_bridge.h>
+#include <opencv2/highgui/highgui.hpp>
+#include <image_transport/image_transport.h>
 
 using namespace std;
 
@@ -26,6 +26,7 @@ int main(int argc, char* argv[])
         std::string image_name;
         image_name =  ss.str();
         image = cv::imread(image_name,CV_LOAD_IMAGE_COLOR);
+        
         if(!image.empty())
         {
             resize(image, imager, cv::Size(640, 480), 0, 0, CV_INTER_AREA);
