@@ -1,4 +1,4 @@
-These are the camera intrinsic parameters for GTA V used for ORB-SLAM. The orignal images are at 1920*1080 resolution, however if you resize the images the camera matrix values i.e. fx, fy, cx, cy must be scaled accordingly.
+These are the camera intrinsic parameters for GTA V that are used for ORB-SLAM. The orignal images are at 1920*1080 resolution, however, if you resize the images the camera matrix values i.e. fx, fy, cx, cy must also be scaled accordingly.
 
 %-- Focal length:
 fc = [ 1215.926670639178155 ; 1131.013669451708665 ];

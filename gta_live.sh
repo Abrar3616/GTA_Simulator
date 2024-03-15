@@ -22,12 +22,12 @@ echo "Started ORB_SLAM"
 cd /home/abrar/catkin_ws
 source devel/setup.bash
 
-#To run GTA without blur uncomment the following 3 lines and comment the rest of the lines
+#To run GTA without blur, uncomment the following 3 lines and comment the rest of the lines
 
 echo "Started Merger_Node"
 rosrun merger merger_node
 
-#To run GTA with blur uncomment the following 6 lines and comment the above 3 lines. Also choose the amount of blur low, medium or high
+#To run GTA with blur, uncomment the following 6 lines and comment the above 3 lines. Also choose the amount of blur low, medium or high
 
 #echo "Starting Blur_Node"
 #rosrun blur_gta blur_low.py &
