@@ -169,6 +169,7 @@ void updateNotificationText()
 		UI::SET_TEXT_CENTRE(1);
 		UI::SET_TEXT_DROPSHADOW(0, 0, 0, 0, 0);
 		UI::SET_TEXT_EDGE(1, 0, 0, 0, 205);
+		
 		if (_notification_text_gxt_entry)
 		{
 			UI::_SET_TEXT_ENTRY((char*)_notification_text.c_str());

@@ -2,16 +2,17 @@
 	Author: Abrar Anwar Qureshi
 */
 #pragma once
-#include "..\dependencies\inc\natives.h"
-#include "..\dependencies\inc\types.h"
-#include "..\dependencies\inc\enums.h"
-#include "..\dependencies\inc\main.h"
+
+#include <vector>
 #include <string>
 #include <fstream>
-#include <vector>
 #include <stdio.h>
 #include <atlstr.h>
 #include <atlimage.h>
+#include "..\dependencies\inc\main.h"
+#include "..\dependencies\inc\types.h"
+#include "..\dependencies\inc\enums.h"
+#include "..\dependencies\inc\natives.h"
 
 #pragma comment(lib, "gdiplus.lib")
 
@@ -81,4 +82,4 @@ bool isFileExist(std::string file_text); // check if file exists
 
 /******************************** Other functions ****************************************************/
 int updateFeatures(); // Update neccessary features within game, should be called in every frames
-void ScriptMain(); // Main functions
+void ScriptMain(); // main functions
